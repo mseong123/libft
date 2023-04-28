@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 17:01:13 by melee             #+#    #+#             */
-/*   Updated: 2023/04/28 10:32:40 by melee            ###   ########.fr       */
+/*   Created: 2023/04/28 09:56:30 by melee             #+#    #+#             */
+/*   Updated: 2023/04/28 09:59:35 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
+}
+/*
+#include <ctype.h>
+#include <stdio.h>
 
-# include <stdlib.h>
+int	main(void)
+{
+	int c = 6;
 
-#endif
+	printf("original %d\n",isascii(c));
+	printf("ft %d",ft_isascii(c));
+	return(0);
+}
+*/

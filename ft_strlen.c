@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 17:01:13 by melee             #+#    #+#             */
-/*   Updated: 2023/04/28 10:32:40 by melee            ###   ########.fr       */
+/*   Created: 2023/02/11 18:38:21 by melee             #+#    #+#             */
+/*   Updated: 2023/04/28 10:33:59 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main(void)
+{
+	char *str;
+
+	str = "hello kajsjdkasjkdjaskjdjk";
+	printf("original %lu\n",strlen(str));
+	printf("ft %lu",ft_strlen(str));
+}
+*/
