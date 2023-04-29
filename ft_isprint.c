@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 09:05:12 by melee             #+#    #+#             */
-/*   Updated: 2023/04/29 12:51:58 by melee            ###   ########.fr       */
+/*   Created: 2023/04/28 13:58:46 by melee             #+#    #+#             */
+/*   Updated: 2023/04/28 15:23:05 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
@@ -23,10 +23,10 @@ int	ft_isalpha(int c)
 
 int	main(void)
 {
-	int c = -42;
+	int c = '\n';
 
-	printf("original %d\n",isalpha(c));
-	printf("ft %d",ft_isalpha(c));
+	printf("original %d\n",isprint(c));
+	printf("ft %d",ft_isprint(c));
 	return(0);
 }
 */
