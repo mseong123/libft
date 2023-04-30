@@ -6,7 +6,7 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 13:56:41 by melee             #+#    #+#             */
-/*   Updated: 2023/04/29 14:26:12 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/01 07:43:19 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,29 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	dst_char = (char *)dst;
 	src_char = (char *)src;
-	while ((dst || src) && i < len)
+	if (dst_char > src_char)
+		while (len--)
+			dst_char[len] = src_char[len];
+	else
 	{
-		dst_char[i] = src_char[i];
-		i++;
+		while ((dst || src) && i < len)
+		{
+			dst_char[i] = src_char[i];
+			i++;
+		}
 	}
 	return (dst);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char src[]="foo-bar";
-	//char dst[] = "goodbye";
-	memcpy(&src[4], &src[4], 4);
-//	ft_memmove(&src[3], &src[4], 4);
+	char src[]="abcdef";
+	//memmove(&src[2], &src[0], 3);
+	ft_memmove(&src[0], &src[3], 3);
 	printf("%s",src);
 	return (0);
 }
-
+*/
