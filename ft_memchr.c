@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 07:45:14 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 10:54:22 by melee            ###   ########.fr       */
+/*   Created: 2023/05/01 11:04:32 by melee             #+#    #+#             */
+/*   Updated: 2023/05/01 12:22:25 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+//tripouille test pass but the other failed(followed tripoiuille cas per man) 
+//(the other test passed when i don't cast c to unsigned char)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*str;
-	char	d;
-	int		len;
+	char			*str;
+	unsigned char	d;
+	size_t			i;
 
 	str = (char *)s;
-	d = (char)(c);
-	len = ft_strlen(str);
-	if (d == '\0' && len > 0)
-		return (str + len);
-	while (*str != '\0')
+	d = (unsigned char)c;
+	i = 0;
+	while (i++ < n)
 	{
 		if (*str == d)
 			return (str);
@@ -32,18 +32,16 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char str[] = "hello";
-	char c = '\0';
-	char *result;
-
-	result = strchr(str, c);
-	//result = ft_strchr(str, c);
-	printf("%s\n", result);
+	char *str = "/|\x12\xff\x09\x42\2002\42|\\";
+	int	c = '\200';
+	size_t n = 10;
+	
+	printf("%s\n", memchr(str, c, n));
 	return (0);
 }
 */

@@ -1,49 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 07:45:14 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 10:54:22 by melee            ###   ########.fr       */
+/*   Created: 2023/02/14 19:18:02 by melee             #+#    #+#             */
+/*   Updated: 2023/05/01 11:27:50 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*str;
-	char	d;
-	int		len;
+	size_t			i;
+	unsigned char	*c;
+	unsigned char	*d;
 
-	str = (char *)s;
-	d = (char)(c);
-	len = ft_strlen(str);
-	if (d == '\0' && len > 0)
-		return (str + len);
-	while (*str != '\0')
+	i = 0;
+	c = (unsigned char *)s1;
+	d = (unsigned char *)s2;
+	if (n == 0)
 	{
-		if (*str == d)
-			return (str);
-		str++;
+		return (0);
 	}
-	return (NULL);
+	while (c[i] == d[i] && i < n - 1)
+	{
+		if (c[i] == '\0')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (c[i] - d[i]);
 }
 /*
-#include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char str[] = "hello";
-	char c = '\0';
-	char *result;
+	char	s1[] = "hello";
+	char	s2[] = "gello ";
+	int		n;
 
-	result = strchr(str, c);
-	//result = ft_strchr(str, c);
-	printf("%s\n", result);
-	return (0);
+	n = ft_strncmp(s1, s2, 0);
+	printf("result = %d", n);
+	return (0);	
 }
 */

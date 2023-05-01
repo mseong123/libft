@@ -1,49 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 07:45:14 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 10:54:22 by melee            ###   ########.fr       */
+/*   Created: 2023/05/01 08:46:13 by melee             #+#    #+#             */
+/*   Updated: 2023/05/01 10:53:54 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+//string assessed for this function is considered only up until the first '\0'
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*str;
-	char	d;
 	int		len;
+	char	d;
 
-	str = (char *)s;
 	d = (char)(c);
-	len = ft_strlen(str);
-	if (d == '\0' && len > 0)
-		return (str + len);
-	while (*str != '\0')
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (*str == d)
-			return (str);
-		str++;
+		if (s[len] == d)
+			return ((char *)&s[len]);
+		len--;
 	}
 	return (NULL);
 }
+
 /*
 #include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char str[] = "hello";
+	char str[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
 	char c = '\0';
-	char *result;
 
-	result = strchr(str, c);
-	//result = ft_strchr(str, c);
-	printf("%s\n", result);
+	printf("my result = %s\n",ft_strrchr(str,c));
 	return (0);
 }
 */

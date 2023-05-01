@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 07:45:14 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 10:54:22 by melee            ###   ########.fr       */
+/*   Created: 2023/05/01 12:39:56 by melee             #+#    #+#             */
+/*   Updated: 2023/05/01 13:30:07 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*str;
-	char	d;
-	int		len;
+	unsigned char	*s3;
+	unsigned char	*s4;
+	size_t			i;
 
-	str = (char *)s;
-	d = (char)(c);
-	len = ft_strlen(str);
-	if (d == '\0' && len > 0)
-		return (str + len);
-	while (*str != '\0')
+	s3 = (unsigned char *)s1;
+	s4 = (unsigned char *)s2;
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (i < n - 1 && s3[i] == s4[i])
 	{
-		if (*str == d)
-			return (str);
-		str++;
+		i++;
 	}
-	return (NULL);
+	return (s3[i] - s4[i]);
 }
 /*
 #include <string.h>
@@ -37,13 +35,11 @@ char	*ft_strchr(const char *s, int c)
 
 int	main(void)
 {
-	char str[] = "hello";
-	char c = '\0';
-	char *result;
+	char s1[] = "gello";
+	char s2[] = "heglo";
+	size_t n = 5;
 
-	result = strchr(str, c);
-	//result = ft_strchr(str, c);
-	printf("%s\n", result);
+	printf("%d\n",ft_memcmp(s1,s2,n));
 	return (0);
 }
 */
