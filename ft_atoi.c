@@ -6,7 +6,7 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:18:54 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 18:01:25 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/01 18:57:17 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	is_space(const char *str)
 int	ft_atoi(const char *str)
 {
 	int	result;
-	int positive;
+	int	positive;
 	int	negative;
 
 	result = 0;
@@ -32,10 +32,10 @@ int	ft_atoi(const char *str)
 	while (*str && is_space(str))
 		str++;
 	while (*str && ((*str == '-' && !negative && !positive)
-		|| (*str == '+' && !positive && !negative)))
+			|| (*str == '+' && !positive && !negative)))
 	{
 		if (*str == '-')
-		   negative = 1;
+			negative = 1;
 		if (*str == '+')
 			positive = 1;
 		str++;
@@ -44,7 +44,7 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + *str++ - '0';
 	if (negative)
 		return (-1 * result);
-	else 
+	else
 		return (result);
 }
 /*
