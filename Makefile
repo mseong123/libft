@@ -1,6 +1,6 @@
 SRCS = $(wildcard *.c)
 
-BONUS_NAME = ft_lstnew ft_lstadd_front ft_lstsize
+BONUS_NAME = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back ft_lstdelone
 
 BONUS_SRCS = $(BONUS_NAME:=.c)
 
