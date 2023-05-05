@@ -6,7 +6,7 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 07:45:14 by melee             #+#    #+#             */
-/*   Updated: 2023/05/01 10:54:22 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/05 12:35:30 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strchr(const char *s, int c)
 	len = ft_strlen(str);
 	if (d == '\0' && len > 0)
 		return (str + len);
+	if (d == '\0' && len == 0)
+		return (str);
 	while (*str != '\0')
 	{
 		if (*str == d)

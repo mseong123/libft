@@ -6,7 +6,7 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 19:05:12 by melee             #+#    #+#             */
-/*   Updated: 2023/05/02 09:19:26 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/05 12:23:11 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str[0] = '\0';
 		return (str);
 	}
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
 	str = malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

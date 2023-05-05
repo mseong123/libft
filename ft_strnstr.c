@@ -6,7 +6,7 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 13:31:36 by melee             #+#    #+#             */
-/*   Updated: 2023/05/02 09:21:10 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/05 12:23:28 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
 /*
 #include <string.h>
 #include <stdio.h>
@@ -50,8 +51,8 @@ int	main(void)
 	//char haystack[] = "MZIRIBMZIRIBMZE123";
 	//size_t	= strlen(needle);
 
-	printf("original function result = %s\n", strnstr(haystack, needle, 0));
-	printf("result = %s", ft_strnstr(haystack, needle, 0));
+	printf("original function result = %s\n", strnstr(NULL, "fake", 0));
+	printf("result = %s", ft_strnstr(NULL, "fake", 0));
 	return(0);
 }
 */
