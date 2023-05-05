@@ -6,21 +6,19 @@
 /*   By: melee <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 13:31:36 by melee             #+#    #+#             */
-/*   Updated: 2023/05/05 12:23:28 by melee            ###   ########.fr       */
+/*   Updated: 2023/05/05 13:12:44 by melee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+static char	*parse(const char *haystack, const char *needle, size_t len)
 {
-	size_t		i;
-	int			matched;
-	size_t		j;
+	size_t	i;
+	size_t	j;
+	int		matched;
 
 	i = 0;
-	if (*needle == '\0')
-		return ((char *)haystack);
 	while (*haystack && i++ < len)
 	{
 		if (*haystack == *needle)
@@ -39,6 +37,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		haystack++;
 	}
 	return (NULL);
+}
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	if (*needle == '\0')
+		return ((char *)haystack);
+	if (!haystack && len == 0)
+		return (NULL);
+	return (parse(haystack, needle, len));
 }
 
 /*
