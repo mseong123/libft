@@ -9,35 +9,37 @@ Validated 5/5/2023. Grade: 125%. Project duration: 1 week.
 ### Functions from <ctype.h>
 
 - `ft_isalpha` - checks for an alphabetic character.
-ft_isdigit - checks for a digit (0 through 9).
-ft_isalnum - checks for an alphanumeric character.
-ft_isascii - checks whether c fits into the ASCII character set.
-ft_isprint - checks for any printable character.
-ft_toupper - convert char to uppercase.
-ft_tolower - convert char to lowercase.
+- `ft_isdigit` - checks for a digit (0 through 9).
+- `ft_isalnum` - checks for an alphanumeric character.
+- `ft_isascii` - checks whether c fits into the ASCII character set.
+- `ft_isprint` - checks for any printable character.
+- `ft_toupper` - convert char to uppercase.
+- `ft_tolower` - convert char to lowercase.
 
 ### Functions from <string.h>
 
-`ft_memset` - fill memory with a constant byte.
-ft_strlen - calculate the length of a string.
-ft_bzero - zero a byte string.
-ft_memcpy - copy memory area.
-ft_memmove - copy memory area.
-ft_strlcpy - copy string to an specific size.
-ft_strlcat - concatenate string to an specific size.
-ft_strchr - locate character in string.
-ft_strrchr - locate character in string.
-ft_strncmp - compare two strings.
-ft_memchr - scan memory for a character.
-ft_memcmp - compare memory areas.
-ft_strnstr - locate a substring in a string.
-ft_strdup - creates a dupplicate for the string passed as parameter.
+- `ft_memset` - fill memory with a constant byte.
+- `ft_strlen` - calculate the length of a string.
+- `ft_bzero` - zero a byte string.
+- `ft_memcpy` - copy memory area.
+- `ft_memmove` - copy memory area.
+- `ft_strlcpy` - copy string to an specific size.
+- `ft_strlcat` - concatenate string to an specific size.
+- `ft_strchr` - locate character in string.
+- `ft_strrchr` - locate character in string.
+- `ft_strncmp` - compare two strings.
+- `ft_memchr` - scan memory for a character.
+- `ft_memcmp` - compare memory areas.
+- `ft_strnstr` - locate a substring in a string.
+- `ft_strdup` - creates a dupplicate for the string passed as parameter.
 
 ### Functions from <stdlib.h>
-ft_atoi - convert a string to an integer.
-ft_calloc - allocates memory and sets its bytes' values to 0.
+
+- `ft_atoi` - convert a string to an integer.
+- `ft_calloc` - allocates memory and sets its bytes' values to 0.
 
 ### Non-standard functions
+
 ft_substr - returns a substring from a string.
 ft_strjoin - concatenates two strings.
 ft_strtrim - trims the beginning and end of string with specific set of chars.
