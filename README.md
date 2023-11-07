@@ -7,7 +7,8 @@ The purpose of this project is to re-code some libc functions, as well as other 
 Validated 5/5/2023. Grade: 125%. Project duration: 1 week.
 
 ### Functions from <ctype.h>
-ft_isalpha - checks for an alphabetic character.
+
+`ft_isalpha` - checks for an alphabetic character.
 ft_isdigit - checks for a digit (0 through 9).
 ft_isalnum - checks for an alphanumeric character.
 ft_isascii - checks whether c fits into the ASCII character set.
@@ -16,7 +17,8 @@ ft_toupper - convert char to uppercase.
 ft_tolower - convert char to lowercase.
 
 ### Functions from <string.h>
-ft_memset - fill memory with a constant byte.
+
+`ft_memset` - fill memory with a constant byte.
 ft_strlen - calculate the length of a string.
 ft_bzero - zero a byte string.
 ft_memcpy - copy memory area.
