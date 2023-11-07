@@ -62,3 +62,27 @@ Validated 5/5/2023. Grade: 125%. Project duration: 1 week.
 - `ft_lstclear` - deletes and free list.
 - `ft_lstiter` - applies a function to each element of a list.
 - `ft_lstmap` - applies a function to each element of a list.
+
+## Clone
+
+Clone the repository:
+
+```
+git clone https://github.com/mseong123/libft.git
+```
+
+## Compile and Run
+
+The program is split into a mandatory part and a bonus part. The bonus part adds Linked list functions.
+
+To compile the mandatory part, `cd` into the cloned directory and:
+
+```shell
+make
+```
+
+To compile the bonus part, `cd` into the cloned directory and:
+
+```shell
+make bonus
+```
