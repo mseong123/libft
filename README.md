@@ -2,6 +2,8 @@
 
 The purpose of this project is to re-code some libc functions, as well as other common utility functions to be reused in the subsequent 42 projects. Makefile will be used to compile the functions(.c) and associated header files (.h) into a static C library (libft.a).
 
+[`Subject PDF`](https://github.com/mseong123/libft/blob/28842a36f554ad682c5ad52afed1f93578185b5e/en.subject.pdf) link.
+
 ## Status
 
 Validated 5/5/2023. Grade: 125%. Project duration: 1 week.
