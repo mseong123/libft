@@ -8,7 +8,7 @@ Validated 5/5/2023. Grade: 125%. Project duration: 1 week.
 
 ### Functions from <ctype.h>
 
-`ft_isalpha` - checks for an alphabetic character.
+- `ft_isalpha` - checks for an alphabetic character.
 ft_isdigit - checks for a digit (0 through 9).
 ft_isalnum - checks for an alphanumeric character.
 ft_isascii - checks whether c fits into the ASCII character set.
